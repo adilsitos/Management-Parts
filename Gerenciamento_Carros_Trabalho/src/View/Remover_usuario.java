@@ -33,6 +33,7 @@ public class Remover_usuario extends javax.swing.JFrame {
         jtxtMail = new javax.swing.JTextField();
         jtxtPass = new javax.swing.JPasswordField();
         sendBt = new javax.swing.JButton();
+        sendBt1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -68,6 +69,19 @@ public class Remover_usuario extends javax.swing.JFrame {
 
         sendBt.setForeground(new java.awt.Color(254, 254, 254));
         sendBt.setText("Remover");
+        sendBt.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                sendBtActionPerformed(evt);
+            }
+        });
+
+        sendBt1.setForeground(new java.awt.Color(254, 254, 254));
+        sendBt1.setText("Voltar");
+        sendBt1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                sendBt1ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -83,15 +97,19 @@ public class Remover_usuario extends javax.swing.JFrame {
                         .addGap(18, 18, 18)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jtxtPass)
-                            .addComponent(jtxtMail)))
+                            .addComponent(jtxtMail))
+                        .addContainerGap())
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 421, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(sendBt, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap())
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(login_jlb)
-                .addGap(100, 100, 100))
+                        .addGap(0, 121, Short.MAX_VALUE)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                                .addComponent(login_jlb)
+                                .addGap(100, 100, 100))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                                .addComponent(sendBt, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(10, 10, 10)
+                                .addComponent(sendBt1, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addContainerGap())))))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -106,9 +124,11 @@ public class Remover_usuario extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(senha_jlb)
                     .addComponent(jtxtPass, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addComponent(sendBt)
-                .addContainerGap(109, Short.MAX_VALUE))
+                .addGap(27, 27, 27)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(sendBt)
+                    .addComponent(sendBt1))
+                .addContainerGap(100, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -142,6 +162,22 @@ public class Remover_usuario extends javax.swing.JFrame {
     private void jtxtPassActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtxtPassActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jtxtPassActionPerformed
+
+    private void sendBtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sendBtActionPerformed
+        // TODO add your handling code here:
+         menu_software menu = new menu_software(); 
+       menu.setVisible(true); 
+        menu.setLocationRelativeTo( null );
+        dispose(); 
+    }//GEN-LAST:event_sendBtActionPerformed
+
+    private void sendBt1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sendBt1ActionPerformed
+        // TODO add your handling code here:
+           menu_software menu = new menu_software(); 
+       menu.setVisible(true); 
+        menu.setLocationRelativeTo( null );
+        dispose(); 
+    }//GEN-LAST:event_sendBt1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -185,6 +221,7 @@ public class Remover_usuario extends javax.swing.JFrame {
     private javax.swing.JPasswordField jtxtPass;
     private javax.swing.JLabel login_jlb;
     private javax.swing.JButton sendBt;
+    private javax.swing.JButton sendBt1;
     private javax.swing.JLabel senha_jlb;
     // End of variables declaration//GEN-END:variables
 }

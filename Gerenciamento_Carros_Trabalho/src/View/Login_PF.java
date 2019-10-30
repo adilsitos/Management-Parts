@@ -15,6 +15,7 @@ public class Login_PF extends javax.swing.JFrame {
      */
     public Login_PF() {
         initComponents();
+        setLocationRelativeTo( null );
     }
 
     /**
@@ -71,12 +72,22 @@ public class Login_PF extends javax.swing.JFrame {
 
         sendBt.setForeground(new java.awt.Color(254, 254, 254));
         sendBt.setText("Entrar");
+        sendBt.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                sendBtActionPerformed(evt);
+            }
+        });
 
         noCad_jlb.setForeground(new java.awt.Color(17, 0, 255));
         noCad_jlb.setText("Não possui cadastro?");
 
         cdBt.setForeground(new java.awt.Color(254, 254, 254));
         cdBt.setText("Cadastrar-se");
+        cdBt.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cdBtActionPerformed(evt);
+            }
+        });
 
         forgotPassLb.setForeground(new java.awt.Color(1, 1, 1));
         forgotPassLb.setText("Esqueceu a senha?");
@@ -125,12 +136,12 @@ public class Login_PF extends javax.swing.JFrame {
                     .addComponent(email_jlb)
                     .addComponent(jtxtMail, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(24, 24, 24)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(senha_jlb)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(1, 1, 1)
-                        .addComponent(jtxtPass, javax.swing.GroupLayout.PREFERRED_SIZE, 13, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(18, 18, 18)
+                        .addComponent(jtxtPass)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(forgotPassLb)
                 .addGap(3, 3, 3)
                 .addComponent(sendBt)
@@ -172,6 +183,23 @@ public class Login_PF extends javax.swing.JFrame {
     private void jtxtMailKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtxtMailKeyTyped
         // TODO add your handling code here:
     }//GEN-LAST:event_jtxtMailKeyTyped
+
+    private void sendBtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sendBtActionPerformed
+        // TODO add your handling code here:
+       // setLocationRelativeTo( null );
+        menu_software menu = new menu_software(); 
+       menu.setVisible(true); 
+        menu.setLocationRelativeTo( null );
+        dispose(); 
+    }//GEN-LAST:event_sendBtActionPerformed
+
+    private void cdBtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cdBtActionPerformed
+        // TODO add your handling code here:
+        cadastro_usuario menu = new cadastro_usuario(); 
+        menu.setVisible(true); 
+        menu.setLocationRelativeTo( null );
+        dispose();
+    }//GEN-LAST:event_cdBtActionPerformed
 
     /**
      * @param args the command line arguments

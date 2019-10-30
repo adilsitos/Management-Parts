@@ -188,30 +188,62 @@ public class menu_software extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
+       Cadastro_peça menu = new Cadastro_peça(); 
+       menu.setVisible(true); 
+       menu.setLocationRelativeTo( null );
+       dispose(); 
+
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
         // TODO add your handling code here:
+                Alterar_peça menu = new Alterar_peça(); 
+       menu.setVisible(true); 
+        menu.setLocationRelativeTo( null );
+        dispose(); 
+
     }//GEN-LAST:event_jButton6ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
         // TODO add your handling code here:
+       Remover_peça menu = new Remover_peça(); 
+       menu.setVisible(true); 
+       menu.setLocationRelativeTo( null );
+       dispose(); 
+
     }//GEN-LAST:event_jButton5ActionPerformed
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
         // TODO add your handling code here:
+        Consultar_peça menu = new Consultar_peça(); 
+        menu.setVisible(true); 
+        menu.setLocationRelativeTo( null );
+        dispose(); 
+
     }//GEN-LAST:event_jButton7ActionPerformed
 
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
         // TODO add your handling code here:
+        Alterar_usuario menu = new Alterar_usuario(); 
+       menu.setVisible(true); 
+        menu.setLocationRelativeTo( null );
+        dispose(); 
     }//GEN-LAST:event_jButton8ActionPerformed
 
     private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
         // TODO add your handling code here:
+         Remover_usuario menu = new Remover_usuario(); 
+       menu.setVisible(true); 
+        menu.setLocationRelativeTo( null );
+        dispose(); 
     }//GEN-LAST:event_jButton9ActionPerformed
 
     private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
         // TODO add your handling code here:
+           Consultar_dados menu = new Consultar_dados(); 
+       menu.setVisible(true); 
+        menu.setLocationRelativeTo( null );
+        dispose(); 
     }//GEN-LAST:event_jButton10ActionPerformed
 
     /**
