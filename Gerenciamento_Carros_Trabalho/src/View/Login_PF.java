@@ -1,3 +1,7 @@
+
+import model.Pessoa;
+import model.dao.PessoaDao;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -70,7 +74,6 @@ public class Login_PF extends javax.swing.JFrame {
             }
         });
 
-        sendBt.setForeground(new java.awt.Color(254, 254, 254));
         sendBt.setText("Entrar");
         sendBt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -81,8 +84,8 @@ public class Login_PF extends javax.swing.JFrame {
         noCad_jlb.setForeground(new java.awt.Color(17, 0, 255));
         noCad_jlb.setText("Não possui cadastro?");
 
-        cdBt.setForeground(new java.awt.Color(254, 254, 254));
         cdBt.setText("Cadastrar-se");
+        cdBt.setToolTipText("");
         cdBt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cdBtActionPerformed(evt);
@@ -188,17 +191,35 @@ public class Login_PF extends javax.swing.JFrame {
         // TODO add your handling code here:
        // setLocationRelativeTo( null );
         menu_software menu = new menu_software(); 
-       menu.setVisible(true); 
-        menu.setLocationRelativeTo( null );
-        dispose(); 
+        PessoaDao p = new PessoaDao();
+        String x = jtxtMail.getText();
+        int y = Integer.parseInt(x);
+        System.out.println(y);
+        if(p.findById(y) != null){
+             menu.setVisible(true); 
+            menu.setLocationRelativeTo( null );
+            dispose(); 
+        }else{
+     
+            System.out.println("Deu ruim");
+        }
+        
+        
+      
     }//GEN-LAST:event_sendBtActionPerformed
 
     private void cdBtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cdBtActionPerformed
         // TODO add your handling code here:
-        cadastro_usuario menu = new cadastro_usuario(); 
-        menu.setVisible(true); 
-        menu.setLocationRelativeTo( null );
-        dispose();
+        cadastro_usuario menu = new cadastro_usuario();
+            
+                
+ 
+             menu.setVisible(true); 
+             menu.setLocationRelativeTo( null );
+             dispose();
+
+        
+        
     }//GEN-LAST:event_cdBtActionPerformed
 
     /**

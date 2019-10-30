@@ -1,6 +1,6 @@
 -- MySQL dump 10.13  Distrib 5.7.17, for Win64 (x86_64)
 --
--- Host: 127.0.0.1    Database: gerenciamentopecas
+-- Host: 127.0.0.1    Database: engsoftware
 -- ------------------------------------------------------
 -- Server version	5.7.23-log
 
@@ -48,8 +48,6 @@ DROP TABLE IF EXISTS `peca`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `peca` (
   `idPeca` int(11) NOT NULL AUTO_INCREMENT,
-  `idFabricante` int(11) NOT NULL,
-  `idSetor` int(11) NOT NULL,
   `nomePeca` varchar(255) DEFAULT NULL,
   `precoPeca` int(11) NOT NULL,
   `quantidadePeca` int(11) NOT NULL,
@@ -84,7 +82,6 @@ CREATE TABLE `pessoa` (
   `cpfPessoa` int(11) NOT NULL,
   `emailPessoa` varchar(255) DEFAULT NULL,
   `horasTrabalhadas` int(11) NOT NULL,
-  `idSetor` int(11) NOT NULL,
   `idadePessoa` int(11) NOT NULL,
   `loginPessoa` varchar(255) DEFAULT NULL,
   `nomePessoa` varchar(255) DEFAULT NULL,
@@ -95,7 +92,7 @@ CREATE TABLE `pessoa` (
   PRIMARY KEY (`id`),
   KEY `FKgifj9qck823psj0ws6pgok2nf` (`setor_id`),
   CONSTRAINT `FKgifj9qck823psj0ws6pgok2nf` FOREIGN KEY (`setor_id`) REFERENCES `setor` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -104,6 +101,7 @@ CREATE TABLE `pessoa` (
 
 LOCK TABLES `pessoa` WRITE;
 /*!40000 ALTER TABLE `pessoa` DISABLE KEYS */;
+INSERT INTO `pessoa` VALUES (1,85225,'DASD',0,18,'Luizao',NULL,852452,0,'422452',1),(2,85225,'DASD',0,18,'Luizao2','luizao kunnn',852452,0,'422452',1),(3,3123124,'ruizan@gmail.com',0,3,'Luizan','Ruizan',2312213,0,'[C@946f287',1);
 /*!40000 ALTER TABLE `pessoa` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -118,7 +116,7 @@ CREATE TABLE `setor` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `nomeSetor` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -127,7 +125,7 @@ CREATE TABLE `setor` (
 
 LOCK TABLES `setor` WRITE;
 /*!40000 ALTER TABLE `setor` DISABLE KEYS */;
-INSERT INTO `setor` VALUES (1,'Almoxarife'),(2,'Almoxarife'),(3,'Almoxarife3');
+INSERT INTO `setor` VALUES (1,'Alimento');
 /*!40000 ALTER TABLE `setor` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -140,4 +138,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-10-29 19:49:14
+-- Dump completed on 2019-10-30 17:12:52

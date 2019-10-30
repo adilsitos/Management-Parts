@@ -27,6 +27,7 @@ public class PessoaDao {
             em.getTransaction().commit();
         }catch(Exception e){
              System.err.println(e);
+             System.err.println("Deu ruim");
             em.getTransaction().rollback();
         }finally{
             em.close();
@@ -43,11 +44,25 @@ public class PessoaDao {
             pessoa = em.find(Pessoa.class, id);
         }catch(Exception e){
             System.err.println(e);
+   
         }finally{
             em.close();
         }
         return pessoa;
     }
+        
+       public Pessoa find(Pessoa p){
+           EntityManager em = new ConnectionFactory().getConnection();
+           try{
+               //p = em.createQuery("from Pessoa where loginPessoa = 'Mickey'");
+           }catch(Exception e){
+               System.err.println(e);
+           }finally{
+               em.close();
+           }
+        
+           return p;
+       }
         
     public List<Pessoa> findAll(){ // select de todos o valores da coluna peças
         EntityManager em = new ConnectionFactory().getConnection();

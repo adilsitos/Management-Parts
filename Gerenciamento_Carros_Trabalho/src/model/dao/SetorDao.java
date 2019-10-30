@@ -34,7 +34,7 @@ public class SetorDao {
         return setor;
     }
     
-        public Setor findById(Integer id){
+    public Setor findById(Integer id){
         
         EntityManager em = new ConnectionFactory().getConnection();
         Setor setor = null;
@@ -49,7 +49,7 @@ public class SetorDao {
         return setor;
     }
         
-      public List<Setor> findAll(){
+    public List<Setor> findAll(){
         EntityManager em = new ConnectionFactory().getConnection();
         List<Setor> setores = null;
         try{
@@ -63,20 +63,20 @@ public class SetorDao {
         return setores;
     }
       
-          public Setor remove(Integer id){
-            EntityManager em = new ConnectionFactory().getConnection();
-            Setor setor = null;
+    public Setor remove(Integer id){
+        EntityManager em = new ConnectionFactory().getConnection();
+        Setor setor = null;
 
         try{
            setor = em.find(Setor.class, id);
-            em.getTransaction().begin();
-            em.remove(setor);
-            em.getTransaction().commit();
+           em.getTransaction().begin();
+           em.remove(setor);
+           em.getTransaction().commit();
         }catch(Exception e){
-            System.err.println(e);
-            em.getTransaction().rollback();
+           System.err.println(e);
+           em.getTransaction().rollback();
         }finally{
-            em.close();
+           em.close();
         }
         return setor;
     }
