@@ -26,7 +26,10 @@ public class Fabricante {
         return idFabricante;
     }
 
-    public void setIdFabricante(Integer idFabricante) {
+    public void setIdFabricante(Integer idFabricante) throws Exception {
+    	if(idFabricante == null || idFabricante<=0 || idFabricante > 2147483647) {
+    		throw new Exception();
+    	}
         this.idFabricante = idFabricante;
     }
 
