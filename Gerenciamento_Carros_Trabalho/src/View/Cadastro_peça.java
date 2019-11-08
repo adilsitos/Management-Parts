@@ -1,3 +1,11 @@
+
+import model.Fabricante;
+import model.Peca;
+import model.Pessoa;
+import model.Setor;
+import model.dao.PecaDao;
+import model.dao.PessoaDao;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -195,6 +203,17 @@ public class Cadastro_peça extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
+         Peca p = new Peca();
+          Fabricante s = new Fabricante();
+       s.setNomeFabricante("sana");
+       s.setEmailFabricante("sana");
+        PecaDao conect = new PecaDao();
+        p.setNomePeca(jTextField1.getText());
+         p.setFabricante(s);
+      
+        p.setPrecoPeca(Integer.parseInt(jTextField2.getText()));
+        p.setQuantidadePeca(jSpinner1.getComponentCount());
+        conect.save(p);
         menu_software menu = new menu_software(); 
        menu.setVisible(true); 
         menu.setLocationRelativeTo( null );

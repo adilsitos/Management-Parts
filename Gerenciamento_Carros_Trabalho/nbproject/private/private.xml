@@ -5,11 +5,15 @@
         <group>
             <file>file:/C:/Users/adils/Desktop/TrabalhoEngenhariaSoftware/Trabalho/Management-Parts/Gerenciamento_Carros_Trabalho/src/model/dao/SetorDao.java</file>
             <file>file:/C:/Users/adils/Desktop/TrabalhoEngenhariaSoftware/Trabalho/Management-Parts/Gerenciamento_Carros_Trabalho/src/View/Cadastro_peça.java</file>
-            <file>file:/C:/Users/adils/Desktop/TrabalhoEngenhariaSoftware/Trabalho/Management-Parts/Gerenciamento_Carros_Trabalho/src/View/Login_PF.java</file>
+            <file>file:/C:/Users/adils/Desktop/TrabalhoEngenhariaSoftware/Trabalho/Management-Parts/Gerenciamento_Carros_Trabalho/src/META-INF/persistence.xml</file>
             <file>file:/C:/Users/adils/Desktop/TrabalhoEngenhariaSoftware/Trabalho/Management-Parts/Gerenciamento_Carros_Trabalho/src/model/Pessoa.java</file>
+            <file>file:/C:/Users/adils/Desktop/TrabalhoEngenhariaSoftware/Trabalho/Management-Parts/Gerenciamento_Carros_Trabalho/src/View/Login_PF.java</file>
             <file>file:/C:/Users/adils/Desktop/TrabalhoEngenhariaSoftware/Trabalho/Management-Parts/Gerenciamento_Carros_Trabalho/src/model/dao/PessoaDao.java</file>
             <file>file:/C:/Users/adils/Desktop/TrabalhoEngenhariaSoftware/Trabalho/Management-Parts/Gerenciamento_Carros_Trabalho/src/model/main/MainClass.java</file>
             <file>file:/C:/Users/adils/Desktop/TrabalhoEngenhariaSoftware/Trabalho/Management-Parts/Gerenciamento_Carros_Trabalho/src/View/cadastro_usuario.java</file>
+            <file>file:/C:/Users/adils/Desktop/TrabalhoEngenhariaSoftware/Trabalho/Management-Parts/Gerenciamento_Carros_Trabalho/src/model/dao/PecaDao.java</file>
+            <file>file:/C:/Users/adils/Desktop/TrabalhoEngenhariaSoftware/Trabalho/Management-Parts/Gerenciamento_Carros_Trabalho/src/model/connection/ConnectionFactory.java</file>
+            <file>file:/C:/Users/adils/Desktop/TrabalhoEngenhariaSoftware/Trabalho/Management-Parts/Gerenciamento_Carros_Trabalho/src/model/Setor.java</file>
         </group>
     </open-files>
 </project-private>

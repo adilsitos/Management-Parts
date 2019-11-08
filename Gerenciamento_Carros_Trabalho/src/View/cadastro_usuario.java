@@ -279,6 +279,10 @@ public class cadastro_usuario extends javax.swing.JFrame {
         p.setHorasTrabalhadas(0);
         p.setSalarioPessoa(0);
         conect.save(p);
+        menu_software menu = new menu_software(); 
+       menu.setVisible(true); 
+        menu.setLocationRelativeTo( null );
+        dispose(); 
         
     }//GEN-LAST:event_jButton1ActionPerformed
 
