@@ -7,6 +7,7 @@ package model.dao;
 
 import java.util.List;
 import javax.persistence.EntityManager;
+import model.Peca;
 import model.Pessoa;
 import model.connection.ConnectionFactory;
 
@@ -54,7 +55,7 @@ public class PessoaDao {
        public Pessoa find(Pessoa p){
            EntityManager em = new ConnectionFactory().getConnection();
            try{
-               //p = em.createQuery("from Pessoa where loginPessoa = 'Mickey'");
+               em.createQuery("from Pessoa where loginPessoa ='"+p.getLoginPessoa()+"'");
            }catch(Exception e){
                System.err.println(e);
            }finally{
@@ -63,6 +64,20 @@ public class PessoaDao {
         
            return p;
        }
+       
+      /* public String findLogin(Pessoa p){
+             String x = null;
+           try{
+               //em.createQuery("from Pessoa where loginPessoa ='"+p.getLoginPessoa()+"'");
+           }catch(Exception e){
+               System.err.println(e);
+           }finally{
+               //em.close();
+           }
+        
+           return ;
+
+       } */
         
     public List<Pessoa> findAll(){ // select de todos o valores da coluna peças
         EntityManager em = new ConnectionFactory().getConnection();
@@ -94,5 +109,27 @@ public class PessoaDao {
             em.close();
         }
         return pessoa;
+    }
+    
+    public Pessoa findbyId(Integer id){ // faz consulta por id
+        
+        EntityManager em = new ConnectionFactory().getConnection();
+        Pessoa pessoa = null;
+        
+        try{
+            pessoa = em.find(Pessoa.class, id);
+        }catch(Exception e){
+            System.err.println(e);
+   
+        }finally{
+            em.close();
+        }
+        return pessoa;
+    }
+    
+  
+
+    public void save(Peca p) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }

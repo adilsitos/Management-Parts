@@ -1,3 +1,6 @@
+
+import model.dao.PecaDao;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -132,8 +135,13 @@ public class Remover_peça extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
+        String x = jTextField1.getText();
+        PecaDao pDao = new PecaDao();
+        pDao.remove(Integer.parseInt(x));
+        
+        
         menu_software menu = new menu_software(); 
-       menu.setVisible(true); 
+        menu.setVisible(true); 
         menu.setLocationRelativeTo( null );
         dispose(); 
     }//GEN-LAST:event_jButton2ActionPerformed

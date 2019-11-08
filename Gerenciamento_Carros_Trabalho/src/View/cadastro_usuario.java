@@ -281,6 +281,14 @@ public class cadastro_usuario extends javax.swing.JFrame {
         }catch(Exception e){
         }
         conect.save(p);
+<<<<<<< HEAD
+=======
+        menu_software menu = new menu_software(); 
+       menu.setVisible(true); 
+        menu.setLocationRelativeTo( null );
+        dispose(); 
+        
+>>>>>>> 26894c3cb6c34b410b6c82b1f1fa3a88abc0485b
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jTextField7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField7ActionPerformed
