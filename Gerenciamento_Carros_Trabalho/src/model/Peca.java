@@ -52,16 +52,54 @@ public class Peca {
         return quantidadePeca;
     }
 
-    public void setQuantidadePeca(int quantidadePeca) {
+    public void setQuantidadePeca(int quantidadePeca) throws Exception{
+    	/*if(quantidadePeca == null) {
+    		throw new Exception();	
+    	}
+    	  	 
+    	if(quantidadePeca%2 =!0) {
+    		throw new Exception();	
+    		
+    		
+    	}
+    	
+    	if(quantidadePeca == char ) {
+    		throw new Exception();	
+    		
+    		
+    	}
+    	if(quantidadePeca =! int ) {
+    		throw new Exception();	
+    		
+    		
+    	}
+    	if(quantidadePeca == 2147483648 ) {
+    		throw new Exception();	
+    		
+    		
+    	}
+    	
+    	
+    */
+
+    	
+    	if(quantidadePeca < 0) {
+    		throw new Exception();
+    		
+    	}
+    	
         this.quantidadePeca = quantidadePeca;
     }
-
+   
     public int getPrecoPeca() {
         return precoPeca;
     }
 
-    public void setPrecoPeca(int precoPeca) {
-        this.precoPeca = precoPeca;
+    public void setPrecoPeca(int precoPeca) throws Exception{
+    	if(precoPeca <= 0) {
+    		throw new Exception();
+    	}
+        this.precoPeca = precoPeca;        
     }
 
    
@@ -70,7 +108,11 @@ public class Peca {
         return nomePeca;
     }
 
-    public void setNomePeca(String nomePeca) {
+    public void setNomePeca(String nomePeca) throws Exception{
+    	if(nomePeca.length() < 4 || nomePeca.length() > 45) {
+    		throw new Exception();
+    		
+    	}
         this.nomePeca = nomePeca;
     }
 

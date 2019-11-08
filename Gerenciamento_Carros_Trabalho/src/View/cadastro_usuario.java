@@ -264,12 +264,12 @@ public class cadastro_usuario extends javax.swing.JFrame {
         Pessoa p = new Pessoa();
         Setor s = new Setor();
         PessoaDao conect = new PessoaDao();
-        
+        try{
         p.setLoginPessoa(jTextField3.getText());
         p.setEmailPessoa(jTextField1.getText());
         p.setNomePessoa(jTextField4.getText());
         p.setIdadePessoa(jSpinner1.getComponentCount());
-        p.setCpfPessoa(Integer.parseInt(jTextField5.getText()));
+        p.setCpfPessoa(jTextField5.getText());
         p.setRgPessoa(Integer.parseInt(jTextField6.getText()));
         p.setSenhaPessoa(jPasswordField1.getPassword().toString());
         //s.setNomeSetor(jTextField7.getText());
@@ -278,8 +278,9 @@ public class cadastro_usuario extends javax.swing.JFrame {
         p.setSetor(s);
         p.setHorasTrabalhadas(0);
         p.setSalarioPessoa(0);
+        }catch(Exception e){
+        }
         conect.save(p);
-        
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jTextField7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField7ActionPerformed

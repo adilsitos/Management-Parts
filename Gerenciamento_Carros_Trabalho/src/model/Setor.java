@@ -37,7 +37,10 @@ public class Setor implements Serializable {
         return nomeSetor;
     }
 
-    public void setNomeSetor(String nomeSetor) {
+    public void setNomeSetor(String nomeSetor) throws Exception{
+    	if(nomeSetor.length() < 2 || nomeSetor.length() > 45 ) {
+    		throw new Exception();
+    	}
         this.nomeSetor = nomeSetor;
     }
     

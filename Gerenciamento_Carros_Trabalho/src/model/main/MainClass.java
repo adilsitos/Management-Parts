@@ -23,6 +23,7 @@ public class MainClass {
         //s.setNomeSetor("Alimento");
         s.setId(1);
         p.setSetor(s);
+        //os erros sao pq ta faltando try
         p.setLoginPessoa("Luizao2");
         p.setNomePessoa("luizao kunnn");
         //p.setLoginPessoa(jTextField3.getText());
