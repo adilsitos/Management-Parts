@@ -1,6 +1,0 @@
-cadastro_usuario$1
-cadastro_usuario$3
-cadastro_usuario$2
-cadastro_usuario$5
-cadastro_usuario$4
-cadastro_usuario

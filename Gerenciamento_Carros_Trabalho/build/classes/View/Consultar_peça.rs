@@ -1,3 +1,0 @@
-Consultar_peça$1
-Consultar_peça$2
-Consultar_peça

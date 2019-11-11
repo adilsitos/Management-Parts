@@ -45,7 +45,7 @@ public class Pessoa {
         return setor;
     }
 
-    public void setSetor(Setor setor){
+    public void setSetor(Setor setor) {
         this.setor = setor;
     }
     public String getLoginPessoa() {
@@ -54,7 +54,7 @@ public class Pessoa {
 
     public void setLoginPessoa(String loginPessoa) throws Exception{
         if(loginPessoa.length()<4 || loginPessoa.length()>15){
-            throw new Exception ("login inválido");
+            throw new Exception ("login invalido");
         }
         this.loginPessoa = loginPessoa;
     }
@@ -65,20 +65,20 @@ public class Pessoa {
 
     public void setNomePessoa(String nomePessoa) throws Exception {
         if(nomePessoa == null){
-        System.out.println("nome inválido");
-        throw new Exception("nome inválido");
+        System.out.println("nome invalido");
+        throw new Exception("nome invalido");
     }
 	if(nomePessoa.length() < 5){
-         System.out.println("nome inválido");
-         throw new Exception("nome inválido");
+         System.out.println("nome invalido");
+         throw new Exception("nome invalido");
      }
      if(!nomePessoa.matches("[a-zA-Z]+")){
-         System.out.println("nome inválido");
-         throw new Exception("nome inválido");
+         System.out.println("nome invalido");
+         throw new Exception("nome invalido");
      }
     if(nomePessoa.length() > 45){
-         System.out.println("nome inválido");
-         throw new Exception("nome inválido");
+         System.out.println("nome invalido");
+         throw new Exception("nome invalido");
      }
         this.nomePessoa = nomePessoa;
     }
@@ -89,7 +89,7 @@ public class Pessoa {
 
     public void setIdadePessoa(int idadePessoa) throws Exception{
         if(idadePessoa <=0 || idadePessoa >100){
-            throw new Exception ("idade inválida");
+            throw new Exception ("idade invalida");
         }
         this.idadePessoa = idadePessoa;
     }
@@ -100,8 +100,8 @@ public class Pessoa {
 
     public void setRgPessoa(int rgPessoa) throws Exception {
 	if (rgPessoa < 100000000 || rgPessoa > 999999999){
-		System.out.println("rg inválido");
-		throw new Exception("rg inválido");
+		System.out.println("rg invalido");
+		throw new Exception("rg invalido");
 	}        
         this.rgPessoa = rgPessoa;
     }
@@ -112,8 +112,8 @@ public class Pessoa {
 
     public void setCpfPessoa(String cpfPessoa) throws Exception{
      if(!cpfPessoa.matches("[0-9]{11}")){
-         System.out.println("cpf inválido");
-         throw new Exception("cpf inválido");
+         System.out.println("cpf invalido");
+         throw new Exception("cpf invalido");
      }
         this.cpfPessoa = cpfPessoa;
     }
@@ -124,20 +124,20 @@ public class Pessoa {
 
     public void setEmailPessoa(String emailPessoa) throws Exception{
     if(emailPessoa == null){
-        System.out.println("email inválido");
-         throw new Exception("email inválido");
+        System.out.println("email invalido");
+         throw new Exception("email invalido");
     }
 	if(emailPessoa.length() < 5){
-         System.out.println("email inválido");
-         throw new Exception("email inválido");
+         System.out.println("email muito curto");
+         throw new Exception("email muito curto");
      }
      if(!emailPessoa.matches(".+@.+")){
-         System.out.println("email inválido");
-         throw new Exception("email inválido");
+         System.out.println("email invalido");
+         throw new Exception("email invalido");
      }
     if(emailPessoa.length() > 45){
-         System.out.println("email inválido");
-         throw new Exception("email inválido");
+         System.out.println("email muito grande");
+         throw new Exception("email muito grande");
      }
         this.emailPessoa = emailPessoa;
     }
@@ -148,7 +148,7 @@ public class Pessoa {
 
     public void setSenhaPessoa(String senhaPessoa) throws Exception{
         if(senhaPessoa.length() < 5 || senhaPessoa.length() > 20){
-            throw new Exception("senha inválida");
+            throw new Exception("senha invalida");
         }
         this.senhaPessoa = senhaPessoa;
     }
@@ -159,7 +159,7 @@ public class Pessoa {
 
     public void setHorasTrabalhadas(int horasTrabalhadas) throws Exception{
         if(horasTrabalhadas <=0 || horasTrabalhadas >999){
-            throw new Exception ("horas inválidas");
+            throw new Exception ("horas invalidas");
         }
         this.horasTrabalhadas = horasTrabalhadas;
     }
@@ -171,7 +171,7 @@ public class Pessoa {
 
     public void setSalarioPessoa(int salarioPessoa) throws Exception{
         if(salarioPessoa <=0 || salarioPessoa >9999999){
-            throw new Exception ("salario inválido");
+            throw new Exception ("salario invalido");
         } 
             this.salarioPessoa = salarioPessoa;
     }

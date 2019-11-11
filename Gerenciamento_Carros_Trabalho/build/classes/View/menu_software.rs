@@ -1,9 +1,0 @@
-menu_software$7
-menu_software$8
-menu_software$5
-menu_software$6
-menu_software
-menu_software$3
-menu_software$4
-menu_software$1
-menu_software$2
